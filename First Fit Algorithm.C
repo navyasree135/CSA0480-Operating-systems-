@@ -4,12 +4,12 @@ void firstFit(int b[], int m, int p[], int n) {
         int j;
         for (j = 0; j < m; j++) {
             if (b[j] >= p[i]) {
-                printf("Process %d allocated to Block %d\n", i+1, j+1);
+                printf("Process %d (Size: %d) allocated to Block %d\n", i+1, j+1);
                 b[j] -= p[i];
                 break;
             }
         }
-        if (j == m) printf("Process %d not allocated\n", i+1);
+        if (j == m) printf("Process %d (Size: %d) not allocated\n", i+1);
     }
 }
 int main() {
